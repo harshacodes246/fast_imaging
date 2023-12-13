@@ -1,0 +1,50 @@
+{%  load static %}  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast imgaing</title>
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'morph.css' %}">
+    <link rel="stylesheet"  type="text/css" href="{% static 'mynewstyle.css' %}">
+     <style>
+       .bg{
+            background-color: #80d1b67c!important;
+       }
+     </style>
+</head>
+<body >
+<script src="{% static 'script.js' %}"></script>
+    <!--nav-->
+    <nav class="navbar">
+      <div class="log">
+         Fast imaging
+      </div>
+      <ul class="navs">
+          <li class="navitem active">
+              <a href="/"> Home</a>
+          </li>
+          <li class="navitem">
+           <a href="#ab">Aboutus</a>
+       </li>
+       <li class="navitem">
+           <a href="/registration">User</a>
+       </li>
+       
+
+      </ul>
+  </nav>
+    <!--/nav-->
+    {% block content %} 
+
+
+
+
+    {% endblock %}
+  <!--js-->  
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+{% extends 'base.html' %} 
+{% load static %}
+   {% block content %}
+   <section class="section">
+    <div class="container">
+       
+        <div class="row">
+            
+            <div class="col-lg-6">
+                <h1>Login Here!</h1>
+                <h2 class="text-danger">{{msg}}</h2>
+                <form action="/login" method="post">
+                    {% csrf_token %}
+                   
+                           <br>
+                        <div class="form-floating">
+                           
+                            <input type="text" name="user" class="form-control" id="user1"  placeholder="Enter Username" required>
+                            <label for="user1">Username</label>
+                          </div>
+                          <br>
+                          <div class="form-floating">
+                            <input type="password"  name="passw" class="form-control" id="floatingPassword" placeholder="Password" required>
+                            <label for="floatingPassword">Password</label>
+                          </div>
+                          <br>
+                          <button type="submit" class="btn btn-outline-dark">login</button>
+                    
+                        </form>
+
+            </div>
+     
+            
+            <div class="col-lg-6">
+
+                <h1 style="color: rgba(3, 127, 199, 0.972); background-color: rgb(255, 255, 255);text-align: center;"> REGISTRATION FORM</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <h3>{{success}}</h3>
+        <table class="table table-striped table-dark">
+            <tr>
+                <td>
+                    <label for="pname" class="patient_name" >  Name</label>
+                </td>
+                <td>
+                    <input type="text" name="name" placeholder="enter name here" id="pname" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- <label for="pname" class="patient_name" >  Type</label> -->
+                </td>
+                <td>
+                    <input type="text" name="type"  id="pname" value="type" hidden>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="unam">User name</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="enter user name" name="uname" id="unam" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="eml" class="email_id">Email</label>
+                </td>
+                <td>
+                    <input type="email" name="email" placeholder="eg:xyz@gmail.com" id="eml" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pword">Password</label>
+                </td>
+                <td>
+                    <input type="password" id="pword" name="password"  >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="cnumber" class="contact_number"> Contact number</label>
+                    
+                </td>
+                <td>
+                    <input type="tel" name="contact_number" placeholder="enter number here" id="cnumber" required>
+                </td>
+            </tr>
+            
+            
+            
+        </table>
+           <div class=" submit button" style=" height: 200px;position: relative;">
+        <button type="submit" class="btn btn-success" style="position: border-radius: 5px; background-color: rgb(122, 122, 233);color: rgb(236, 236, 245);  " >Register</button>
+            </div>
+    </form>
+
+            </div>
+
+        </div><!--/row-->
+
+    </div><!--/container-->
+   
+</section>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'dhome.html' %} 
+{% load static %} 
+
+{% block content %} 
+
+<section class="section">
+    <table class="table table-striped table-dark">
+      <tr> 
+          <th>Name</th>  <th>Email</th> <th>Contact</th>  <th>AGE</th> <th>Gender</th> <th>Blood Group</th> <th>allergy history</th>
+          <th>Allergy Details</th>
+      </tr>
+      {% for ls in data %} 
+
+<tr>
+    <td> {{ls.nam}}</td> 
+    <td> {{ls.eml}}</td> 
+    <td> {{ls.cnum}}</td> 
+    <td> {{ls.p_age}}</td> 
+    <td> {{ls.gen}}</td> 
+    <td> {{ls.bgroup}}</td> 
+    <td> {{ls.allrgy}}</td> 
+    <td> {{ls.allrgy_details}}</td> 
+</tr>
+
+      {% endfor %}
+ </table>
+</section>
+{% endblock %}
